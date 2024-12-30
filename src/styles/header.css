@@ -1,0 +1,74 @@
+.hall {
+    background-color: #fff;
+    display: flex;
+    width: screen;
+    height: 83px;
+
+}
+
+.logo-h {
+    background-color: transparent;
+    height: 41px;
+    width: full;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 9vw;
+    /* 137px */
+}
+
+.gba-button-r {
+    background-color: white;
+    border: #0fbc00 solid 2px;
+    border-radius: 9999px;
+    color: rgb(15, 188, 0);
+    font-size: 16px;
+    font-weight: 600;
+    height: 34px;
+    width: 77px;
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2.3vw;
+    /* 36px */
+}
+
+.gba-button-r:hover {
+    color: #EA9156;
+    border: #EA9156 solid 2px;
+    cursor: pointer;
+}
+
+.phoneicon {
+    background-color: #0fbc00;
+    height: full;
+    width: full;
+    border: #0fbc00 solid 1px;
+    border-radius: 0.25rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 46.3vw;
+    /* 710px */
+}
+
+.phonenum {
+    font-size: 16px;
+    color: #0fbc00;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-right: 1.6vw;
+    /* 24px */
+}
+
+.flag {
+    width: 50px;
+    height: 29px;
+    margin-top: auto;
+    margin-bottom: auto;
+    object-fit: cover;
+    margin-right: 1.6vw;
+    /* 24px */
+
+}
