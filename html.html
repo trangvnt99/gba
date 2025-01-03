@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<style>
+    /* Ẩn chữ khi đang xoay */
+    .selector3 li.rotating label {
+        visibility: hidden;
+        /* Ẩn chữ */
+        opacity: 0;
+        /* Ẩn chữ hoàn toàn */
+        transition: visibility 0.3s, opacity 0.3s;
+    }
+
+    /* Hiển thị lại chữ khi không xoay nữa */
+    .selector3 li label {
+    visibility: visible;
+    /* Hiển thị chữ */
+    opacity: 1;
+    /* Chữ sẽ trở lại trạng thái bình thường */
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+    .selector3 {
+        position: absolute;
+        left: 30%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        /*margin-top: -70px;
+margin-left: -70px;*/
+    }
+
+    .selector3,
+    .selector3 button {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+    }
+
+    .selector3 button {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        background: #40bb0b;
+        border-radius: 50%;
+        border: 0;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+        transition: all .1s;
+    }
+
+    .selector3 button:hover {
+        background: #3071a9;
+    }
+
+    .selector3 button:focus {
+        outline: none;
+    }
+
+    .selector3 ul {
+        position: absolute;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
+    }
+
+    .selector3 li {
+        position: absolute;
+        width: 0;
+        height: 100%;
+        margin: 0 50%;
+        -webkit-transform: rotate(-360deg);
+        transition: all 0.8s ease-in-out;
+    }
+
+    .selector3 li input {
+        display: none;
+    }
+
+    .selector3 li input+label {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        line-height: 1px;
+        margin-left: 0;
+        background: #fff;
+        border: solid 2px #ffffff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1px;
+        color: #40bb0b;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: none;
+        transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+        list-style-type: none;
+
+    }
+
+    .selector3 li input+label:hover {
+        background: #f0f0f0;
+    }
+
+    .selector3 li input:checked+label {
+        background: #5cb85c;
+        color: white;
+    }
+
+    .selector3 li input:checked+label:hover {
+        background: #449d44;
+    }
+
+    .selector3.open li input+label {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        list-style-type: none;
+    }   
+    
+</style>
+<body>
+    <div class="selector3">
+        <ul>
+            <li data-title="Y tế" style="transform: rotate(0deg);">
+                <input id="c250-1" type="checkbox">
+                <label for="c250-1" style="transform: rotate(0deg);">
+                    <a href="http://2dhc.com/san-pham/1152/Y-Te-250.html">Hải sản</a>
+                </label>
+            </li>
+            <li data-title="Y tế 2" style="transform: rotate(0deg);">
+                <input id="c250-2" type="checkbox">
+                <label for="c250-2"   style="transform: rotate(0deg);height: 15px;width: 15px;">
+                    <a href="http://2dhc.com/san-pham/1152/Y-Te-250.html">Hải sản</a>
+                </label>
+            </li>
+            <li data-title="Giáo dục" style="transform: rotate(-72deg);">
+                <input id="c252" type="checkbox">
+                <label for="c252" style="transform: rotate(-72deg);">
+                    <a href="http://2dhc.com/san-pham/1152/Giao-Duc-252.html">Thực phẩm</a>
+                </label>
+            </li>
+            <li data-title="Giáo dục 2" class="small-li"style="transform: rotate(0deg);">
+                <input id="c252-2" type="checkbox">
+                <label for="c252-2"  class="small-title" style="transform: rotate(0deg);height: 15px;width: 15px;">
+                    <a href="http://2dhc.com/san-pham/1152/Giao-Duc-252.html">Thực phẩm</a>
+                </label>
+            </li>
+            <li data-title="Công nghệ" style="transform: rotate(-144deg);">
+                <input id="c254" type="checkbox">
+                <label for="c254"  style="transform: rotate(-144deg);">
+                    <a href="http://2dhc.com/san-pham/1152/Cong-Nghe-254.html">Gia Vị</a>
+                </label>
+            </li>
+            <li data-title="Công nghệ 2" class="small-li"style="transform: rotate(-144deg);">
+                <input id="c254-2" type="checkbox">
+                <label for="c254-2" class="small-title" style="transform: rotate(-144deg);height: 15px;width: 15px;">
+                    <a href="http://2dhc.com/san-pham/1152/Cong-Nghe-254.html">Gia Vị</a>
+                </label>
+            </li>
+            <li data-title="Bảo hiểm" style="transform: rotate(-216deg);">
+                <input id="c272" type="checkbox">
+                <label for="c272" style="transform: rotate(-216deg);">
+                    <a href="http://2dhc.com/san-pham/1152/Bao-Hiem-272.html">Thịt</a>
+                </label>
+            </li>
+            <li data-title="Bảo hiểm 2" class="small-li" style="transform: rotate(-216deg);">
+                <input id="c272-2" type="checkbox">
+                <label for="c272-2" class="small-title" style="transform: rotate(-216deg);height: 15px;width: 15px;">
+                    <a href="http://2dhc.com/san-pham/1152/Bao-Hiem-272.html">Thịt</a>
+                </label>
+            </li>
+            <li data-title="Du lịch" style="transform: rotate(-288deg);">
+                <input id="c274" type="checkbox">
+                <label for="c274" style="transform: rotate(-288deg);">
+                    <a href="http://2dhc.com/san-pham/1152/Du-Lich-274.html">Ngũ cốc</a>
+                </label>
+            </li>
+            <li data-title="Du lịch 2" class="small-li" style="transform: rotate(-288deg);">
+                <input id="c274-2" type="checkbox">
+                <label for="c274-2" class="small-title" style="transform: rotate(-288deg);height: 15px;width: 15px;">
+                    <a href="http://2dhc.com/san-pham/1152/Du-Lich-274.html">Ngũ cốc</a>
+                </label>
+            </li>
+        <button id="toggleButton">OCOP</button>
+    </div>
+    
+    
+    <script>
+        const angleStart = 0;  
+    
+        function rotate(li, d) {
+            $({ d: angleStart }).animate({ d: d }, {
+                step: function (now) {
+                    $(li).css({ transform: 'rotate(' + now + 'deg)' })
+                        .find('label').css({ transform: 'rotate(' + (-now) + 'deg)' });
+                 }, 
+                duration: 50 
+            });
+        }
+    
+        function toggleOptions() {
+            const container = $('.selector3');
+            const listItems = container.find('li');
+            const itemCount = listItems.length;
+            const deg = 360 / itemCount;
+    
+            const isOpen = container.hasClass('open');
+            container.toggleClass('open');
+    
+            listItems.each(function (index) {
+                const angle = index * deg;
+                if (isOpen) {
+                    rotate(this, angleStart);
+                } else {
+                    rotate(this, angle);
+                }
+            });
+        }
+    
+        $(document).ready(function() {
+            setTimeout(toggleOptions, 10);      
+        });
+    </script>
+</body>
+</html>
+

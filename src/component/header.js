@@ -8,10 +8,16 @@ const Header = () => {
     return (
         <header>
             <div className="hall">
+                <a href="http://2dhc.com" className="title">
                 <img src={logo} alt="logo" className="logo-h" />
-                <div className="gba-button-r">
-                    GBA
-                </div>
+                </a>
+
+                <a href="http://2dhc.com" className="title">
+                    <div className="gba-button-r">
+                        GBA
+                    </div>
+                </a>
+                
                 <div className="phoneicon">
                     <box-icon name='phone' type='solid' color='#ffffff' ></box-icon>
                 </div>

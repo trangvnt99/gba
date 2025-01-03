@@ -10,9 +10,10 @@ const Main1 = () => {
             <Header />
             <div className="blackbox">
                 <box-icon name='home' type='solid' color="#cabfbf" className="icon"></box-icon>
-                <p> Trang chủ</p>
+                <a href="http://localhost:3000/main_1" className="a_title_navi">  
+                    <p> Trang chủ</p>
+                </a>
                 <box-icon name='chevron-right' type='solid' color="#cabfbf" className="icon"></box-icon>
-
                 <p id="mem">Tổ chức</p>
             </div>
             <div className="list" id="3">
@@ -23,31 +24,32 @@ const Main1 = () => {
                         <div className="img-mem">
                             <img src={img} alt="logo" className="logo-mem" />
                         </div>
-                        <div className="text-mem">Châu Âu</div>
+
+                        <div class="text_mem">AFTA</div>
                     </div>
                     <div className="">
                         <div className="img-mem">
                             <img src={img} alt="logo" className="logo-mem" />
                         </div>
-                        <div className="text-mem">Châu Âu</div>
+                        <div className="text_mem">Châu Âu</div>
                     </div>
                     <div className="">
                         <div className="img-mem">
                             <img src={img} alt="logo" className="logo-mem" />
                         </div>
-                        <div className="text-mem">Châu Âu</div>
+                        <div className="text_mem">Châu Âu</div>
                     </div>
                     <div className="">
                         <div className="img-mem">
                             <img src={img} alt="logo" className="logo-mem" />
                         </div>
-                        <div className="text-mem">Châu Âu</div>
+                        <div className="text_mem">Châu Âu</div>
                     </div>
                     <div className="">
                         <div className="img-mem">
                             <img src={img} alt="logo" className="logo-mem" />
                         </div>
-                        <div className="text-mem">Châu Âu</div>
+                        <div className="text_mem">Châu Âu</div>
                     </div>
                 </div>
             </div>

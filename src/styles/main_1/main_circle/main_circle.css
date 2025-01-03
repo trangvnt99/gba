@@ -1,0 +1,110 @@
+
+
+.container_circle{
+    background-image: url(../../../img/imagevn.png) ;
+    background-repeat: no-repeat; 
+    height: 857px;
+    width: 448px; 
+    object-fit: contain;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-self:flex-end;
+    display: grid;
+    top: 270%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.container_circle_grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;  
+    gap: 10px; 
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+ 
+}
+
+
+.item_circle {
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+.item_circle:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    visibility: hidden; 
+}
+
+.item_circle:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+    visibility: hidden;  
+    transform: translateX(2%); 
+}
+
+.item_circle:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+    transform: translateX(15%); 
+}
+.item_circle:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+   
+}
+.item_circle:nth-child(6) {
+    grid-column: 3;
+    grid-row: 2;
+    transform: translateX(-15%); 
+}
+
+/* .item_circle:nth-child(7) {
+    justify-self: start;
+    transform: translateX(1%); 
+} */
+
+.item_circle:nth-child(8) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* .item_circle:nth-child(9) {
+    justify-self: end;
+    transform: translateX(2%); 
+} */
+
+.item_circle:nth-child(10) {
+    justify-self: end;
+    transform: translateX(20%); 
+}
+
+.item_circle:nth-child(11) {
+    grid-column: 2;
+    grid-row: 4;
+    visibility: hidden; 
+}
+
+.item_circle:nth-child(12) {
+    justify-self: start;
+    transform: translateX(-20%); 
+}
+
+.item_circle:nth-child(14) {
+    grid-column: 1;
+    grid-row: 5;
+    visibility: hidden;  
+}
+
+.item_circle:nth-child(15) {
+    grid-column: 3;
+    grid-row: 5;
+    visibility: hidden;  
+}

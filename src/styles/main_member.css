@@ -2,7 +2,13 @@ body {
     background-color: #f5f6f5;
 
 }
-
+.a_title_navi{
+    text-decoration: none;
+    color: #cabfbf;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;  
+}
 .blackbox {
     background-color: black;
     color: #cabfbf;
@@ -63,6 +69,7 @@ body {
 .grid-mem {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-top:40px;
     /* margin-left: 2.6vw;
     margin-right: 2.6vw; */
     /* margin-left: 100px;
@@ -90,7 +97,15 @@ body {
     margin-bottom: 20px;
     margin-left: 10px;
 }
-
+.text_mem {
+    color: 'black';
+    font-size: 20;
+    font-family: Inter;
+    font-weight: 700;
+    text-decoration: underline;
+    word-wrap: break-word;
+    margin-top: 18px;
+}
 .subcontent {
     text-align: left;
     color: #938e8e;
