@@ -7,11 +7,13 @@ green {
     font-weight: 450;
 }
 
-.gridGBA {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 13.5vw;
-    margin-right: 13.5vw;
+
+.grid_GBA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; 
+    margin: 4rem; 
 }
 
 .grid-item {
@@ -24,7 +26,15 @@ green {
     margin-bottom: 30px;
     padding: 20px;
 }
-
+#special-item::marker {
+    color:#0fbc00;
+  }
+  
+.line {
+    width: 2px;
+    height: 60px; /* Chiều cao đường phân cách */
+    background-color: green; /* Màu đường phân cách */
+}
 /* ul {
     list-style-image: url('../picture/pointer.png');
 } */

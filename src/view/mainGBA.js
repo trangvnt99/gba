@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/mainGBA.css";
-// import img from "../picture/logo.png";
+
 import Footer from "../component/footer";
 import Header from "../component/header";
 import 'boxicons';
@@ -13,85 +13,41 @@ const MainGBA = () => {
                 <box-icon name='home' type='solid' color="#cabfbf" className="icon"></box-icon>
                 <p> Trang chủ</p>
                 <box-icon name='chevron-right' type='solid' color="#cabfbf" className="icon"></box-icon>
-                <p id="mem">Commercial & Investment Associate Sourcing Representative</p>
+                <p id="mem">GBA</p>
             </div>
             <div className="list">
-                <h4 className="title">Vai trò <green>2dhC</green> đối với các bên</h4>
+                <h1 className="title"><green>2dhC</green> là một doanh nghiệp "thuộc Đức" là thành viên của <green>GBA</green></h1>
                 <p className="content">Sourcing, hay còn gọi là tìm nguồn cung ứng, đóng vai trò cực kỳ quan trọng trong nhiều lĩnh vực kinh doanh và quản lý chuỗi cung ứng. Dưới đây là một số vai trò chính của sourcing:</p>
-                <div className="gridGBA">
+
+                <li className="title" id="special-item">Commercial & Investment Associate Sourcing Representative :</li>
+                <div className="grid_GBA">
                     <div className="grid-item">
-                        <b>
-                            1. Đảm bảo nguồn cung ổn định
-                        </b>
-                        <br />
-                        <i>
-                            Sourcing giúp doanh nghiệp tìm và chọn các nhà cung cấp đáng tin cậy, đảm bảo rằng nguồn cung cấp nguyên vật liệu hoặc sản phẩm luôn ổn định và liên tục.
+                        
+                        <i>Đưa các sản phẩm/dịch vụ của các công ty trong nước ra thị trường quốc tế
                         </i>
                     </div>
+                    <div class= "line"></div>
                     <div className="grid-item">
-                        <b>
-                            2. Tiết kiệm chi phí:
-                        </b>
-                        <br />
+
                         <i>
-                            Bằng cách tìm kiếm và đàm phán với nhiều nhà cung cấp khác nhau, doanh nghiệp có thể so sánh giá cả và chất lượng để chọn được nhà cung cấp có giá tốt nhất, từ đó giảm chi phí sản xuất.                        </i>
+                        Chọn lựa các nhà đầu tư phù hợp để đầu tư với các doanh nghiệp trong nước.
+                             </i>
                     </div>
+                    <hr className="line"/>
                     <div className="grid-item">
-                        <b>
-                            3. Nâng cao chất lượng sản phẩm:
-                        </b>
-                        <br />
+                       
                         <i>
-                            Sourcing cho phép doanh nghiệp lựa chọn những nhà cung cấp có chất lượng sản phẩm cao, đáp ứng các tiêu chuẩn và yêu cầu kỹ thuật, từ đó cải thiện chất lượng sản phẩm cuối cùng.                        </i>
+                        Tìm nguồn quỹ tài chính quốc tế
+                            </i>
                     </div>
-                    <div className="grid-item">
-                        <b>
-                            4. Tối ưu hóa thời gian giao hàng:
-                        </b>
-                        <br />
-                        <i>
-                            Tìm được các nhà cung cấp có khả năng giao hàng đúng hạn và linh hoạt giúp doanh nghiệp duy trì được lịch trình sản xuất và giao hàng, tránh tình trạng chậm trễ.                        </i>
-                    </div>
-                    <div className="grid-item">
-                        <b>
-                            4. Tối ưu hóa thời gian giao hàng:
-                        </b>
-                        <br />
-                        <i>
-                            Tìm được các nhà cung cấp có khả năng giao hàng đúng hạn và linh hoạt giúp doanh nghiệp duy trì được lịch trình sản xuất và giao hàng, tránh tình trạng chậm trễ.                        </i>
-                    </div>
-                    <div className="grid-item">
-                        <b>
-                            5. Tạo ra lợi thế cạnh tranh:
-                        </b>
-                        <br />
-                        <i>
-                            Sourcing hiệu quả có thể giúp doanh nghiệp có được những nguyên vật liệu hoặc sản phẩm đặc biệt mà đối thủ cạnh tranh không có, từ đó tạo ra sự khác biệt và lợi thế cạnh tranh trên thị trường.                        </i>
-                    </div>
-                    <div className="grid-item">
-                        <b>
-                            6. Quản lý rủi ro:
-                        </b>
-                        <br />
-                        <i>
-                            Việc đa dạng hóa nguồn cung giúp doanh nghiệp giảm thiểu rủi ro liên quan đến việc phụ thuộc vào một nhà cung cấp duy nhất, đặc biệt là trong các tình huống khẩn cấp hoặc biến động thị trường.                        </i>
-                    </div>
-                    <div className="grid-item">
-                        <b>
-                            7. Phát triển mối quan hệ đối tác:
-                        </b>
-                        <br />
-                        <i>
-                            Sourcing còn giúp xây dựng và duy trì mối quan hệ lâu dài với các nhà cung cấp, tạo nền tảng cho sự hợp tác và phát triển bền vững trong tương lai.                        </i>
-                    </div>
+
                 </div>
+
+                <li className="title" id="special-item">Chào mừng bạn đã đến với hiệp hội doanh nghiệp đức tại việt nam - <green>GBA</green></li>
                 <ul className="content">
-                    <li>
-                        Như vậy, Sourcing không chỉ là một công việc kỹ thuật mà còn là một yếu tố chiến lược quan trọng, góp phần vào sự thành công và phát triển bền vững của doanh nghiệp.
-                    </li>
-                    <li>
-                        Tóm lại, Sourcing đóng một vai trò không thể thiếu trong việc giúp các doanh nghiệp không chỉ mở rộng thị trường mà còn cải thiện hiệu quả hoạt động và sự cạnh tranh trên trường quốc tế. Sự hiểu biết và ứng dụng linh hoạt mô hình này sẽ là chìa khóa quan trọng giúp các nhà sản xuất không ngừng phát triển và thành công trong kỷ nguyên mới.
-                    </li>
+                    <p>Hiệp hội Doanh nghiệp Đức (GBA) là một trong những hiệp hội doanh nghiệp nước ngoài đầu tiên tại Việt Nam, bắt đầu hoạt động từ năm 1995. Trong hơn 28 năm, GBA là tâm điểm của đời sống, văn hóa và giá trị doanh nghiệp Đức tại Việt Nam. Nó đã giúp các doanh nghiệp Đức phát triển hoạt động, tư vấn về nhiều chủ đề và tạo cơ hội kinh doanh và trao đổi xã hội trên khắp Việt Nam.</p>
+                    <p>Ngày nay, GBA có hơn 370 thành viên, phản ánh những cơ hội và sự năng động của thị trường Việt Nam. Đây là một trong những hiệp hội doanh nghiệp nước ngoài lớn nhất tại Việt Nam và là đối tác được đánh giá cao trong cộng đồng địa phương. Ngoài ra, GBA còn là một trong những thành viên sáng lập của EuroCham Việt Nam, một tổ chức hợp tác đại diện cho các hoạt động và lợi ích xuyên châu Âu tại Việt Nam. Tư cách thành viên GBA tự động đi cùng với tư cách thành viên EuroCham và tăng cường mối quan hệ của chúng tôi với các cộng đồng doanh nghiệp Châu Âu khác.</p> 
+                    <p>Chúng tôi hy vọng trang web của chúng tôi sẽ cung cấp cho bạn thông tin hữu ích về GBA, thành viên, lợi ích thành viên và hoạt động của chúng tôi. Nếu có bất kỳ câu hỏi nào về chúng tôi, các sự kiện của chúng tôi hoặc đơn đăng ký thành viên của bạn, nhóm văn phòng của chúng tôi sẽ có mặt để hỗ trợ bạn. Cùng với các thành viên của chúng tôi, chúng tôi sẽ rất vui mừng được chào đón bạn đến với các sự kiện của chúng tôi và hy vọng bạn cũng có thể trở thành thành viên mới.</p>
 
                 </ul>
             </div>

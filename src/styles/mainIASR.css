@@ -1,0 +1,52 @@
+green {
+    color: #0fbc00;
+}
+
+.content {
+    text-align: justify;
+    font-weight: 450;
+}
+
+.gridGBA {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 13.5vw;
+    margin-right: 13.5vw;
+}
+
+.grid-item {
+    background-color: #e9f2ee;
+    border: #e9f2ee solid 1px;
+    border-radius: 1rem;
+    margin: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+ul {
+    list-style: none; /* Tắt dấu chấm mặc định */
+    padding-left: 0; /* Loại bỏ lề trái của ul */
+}
+
+.custom-bullet {
+    position: relative; /* Đặt vị trí cho icon */
+    padding-left: 80px; /* Thêm khoảng cách trái để có không gian cho icon */
+}
+
+.custom-bullet::before {
+    content: ''; /* Tạo nội dung rỗng */
+    position: absolute; /* Đặt icon ở vị trí tuyệt đối */
+    left: 0; /* Đặt icon vào vị trí trái */
+    top: 50%; /* Đặt icon vào giữa văn bản */
+    transform: translateY(-50%); /* Căn giữa icon theo chiều dọc */
+    width: 50px;
+    height:50px;/* Kích thước icon */
+    background-image: url('https://img.icons8.com/?size=100&id=o9cwDOfMMqS9&format=png&color=000000'); /* Thêm icon */
+    background-size: cover; /* Đảm bảo icon vừa với kích thước */
+}
+
+/* ul {
+    list-style-image: url('../picture/pointer.png');
+} */
