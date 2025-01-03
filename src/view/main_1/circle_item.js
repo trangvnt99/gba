@@ -8,22 +8,35 @@ import imgGiaVi from '../../img/main_1/giavi.png';
 import imgOcop from '../../img/main_1/ocop.png';
 import imgHaiSan from '../../img/main_1/haisan.png';
 import imgThucPham from '../../img/main_1/thucpham.png';
-import imageItem from '../../img/food.jpg';
 const data = [
-  { image: imgHaiSan, label: 'Hải sản' },
-  { image: imgOcop, label: 'OCOP &' },
-  { image: imgGiaVi, label: 'Gia Vị' },
-  { image: imgThit, label: 'Thịt' },
-  { image: imgNguCoc, label: 'Ngũ cốc' },
+  {
+    image: imgHaiSan,
+    label: 'Hải sản',
+    description: 'Hải sản tươi ngon được đánh bắt trực tiếp từ biển cả. Chúng tôi cung cấp đa dạng các loại hải sản như tôm, cua, cá, mực với chất lượng đảm bảo, phù hợp cho mọi bữa ăn gia đình và nhà hàng.',
+   },
+  {
+    image: imgOcop,
+    label: 'OCOP &',
+    description: 'Các sản phẩm OCOP được chọn lọc kỹ lưỡng từ các vùng miền khác nhau, bao gồm đặc sản địa phương, thủ công mỹ nghệ, và nông sản đạt chuẩn quốc gia, mang đến sự đa dạng và chất lượng tuyệt hảo.',
+   },
+  {
+    image: imgGiaVi,
+    label: 'Gia Vị',
+    description: 'Gia vị hảo hạng giúp làm tăng hương vị cho món ăn của bạn. Từ các loại bột gia vị truyền thống đến các loại sốt nhập khẩu, tất cả đều được chọn lọc kỹ lưỡng nhằm đảm bảo chất lượng cao nhất.',
+   },
+  {
+    image: imgThit,
+    label: 'Thịt',
+    description: 'Thịt sạch và tươi ngon, được nuôi dưỡng trong môi trường tự nhiên, không sử dụng hóa chất độc hại. Chúng tôi cung cấp các loại thịt bò, thịt heo, và gia cầm đạt chuẩn an toàn thực phẩm.',
+   },
+  {
+    image: imgNguCoc,
+    label: 'Ngũ cốc',
+    description: 'Ngũ cốc nguyên hạt giàu dinh dưỡng, tốt cho sức khỏe, bao gồm các loại như gạo lứt, yến mạch, đậu đỗ, phù hợp cho người ăn chay và những ai muốn duy trì lối sống lành mạnh.',
+   },
 ];
 
 const CircleComponent = React.memo(() => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    //navigate('/productdetail');
-    window.location.href = 'http://2dhc.com/san-pham/1/Hai-San--1.html';    
-  };
 
   // Khai báo trạng thái cho việc hiển thị từng item
   const [visibleItems, setVisibleItems] = useState([]); 
@@ -112,11 +125,27 @@ const CircleComponent = React.memo(() => {
           centerX + radius * Math.cos(angle) - itemSize / 2;
         const y =
           centerY + radius * Math.sin(angle) - itemSize / 2;
-        let longText = "Thông tin chi tiết về mục này." + item.label;
+        let longText = "Thông tin chi tiết về mục " + item.label +":" + item.description;
+
+
+        const handleClick = () => {
+          if (item.label === 'Hải sản') {
+            window.location.href = 'http://localhost:3000/main_food/haisan';
+          } else if (item.label === 'Thịt') {
+            window.location.href = 'http://localhost:3000/main_food/giavi';
+          } else if (item.label === 'OCOP &') {
+            window.location.href = 'http://localhost:3000/main_food/giavi';
+          } else if (item.label === 'Ngũ cốc') {
+            window.location.href = 'http://localhost:3000/main_food/ngucoc_hat';
+          } else {
+            window.location.href = 'http://localhost:3000/main_food/giavi';
+          }
+        };
+   
         return (
           <div
             key={index}
-            className={`item rotating-item ${
+            className={`item-cr rotating-item ${
               visibleItems.includes(index) ? 'visible' : ''
             }`}
             style={{
@@ -128,17 +157,17 @@ const CircleComponent = React.memo(() => {
               height: itemSize,
               '--index': index,
             }}
-          >
+          >   
             <Tooltip title={longText}>
-              <div className="item-container" onClick={handleClick} style={{ cursor: 'pointer' }}>
-                <img src={item.image} alt='' className="item-image" height={itemSize} width={itemSize+20} />
-                <div className="item-label">{item.label}</div>
+              <div className="item-container-circle-main" onClick={handleClick} style={{ cursor: 'pointer' }}>
+                <img src={item.image} alt='' className="item-image-cirle-main" height={itemSize} width={itemSize+20} />
+                <div className="item-label-cirlce-man">{item.label}</div>
               </div>
             </Tooltip>
           </div>
         );
       })}
-
+      
       {/* Vòng tròn trung tâm */}
       <div
         className="center-circle"
@@ -151,7 +180,7 @@ const CircleComponent = React.memo(() => {
         }}
       >
         <div class="item-container">
-          <a href='http://2dhc.com/thong-tin/Thuc-Pham-1.html'>
+          <a href='http://localhost:3000/main_food/thuc_uong'>
             <img src={imgThucPham} className="center-image" height={itemSize+50} width={itemSize+70} />
             <div className="center-label">Thực phẩm</div>
           </a>

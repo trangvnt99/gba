@@ -87,9 +87,12 @@
   
   
   .img {
-    width: 50px;  
-    height: 50px;  
-    margin: 5px; 
+    width: 50px;
+    height: 50px;
+    margin-left: 60px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center
   }
   
   .group_side {
@@ -156,7 +159,7 @@
     text-align: left;
     position: static;
     top: 0px;
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 20px;
     font-weight: medium;
   }
@@ -186,7 +189,11 @@
   .a_title_post{
     text-decoration: none;
     color: black;
+    display: flex;  
+    justify-content: flex-start; 
+    font-family: Arial, sans-serif;  
   }
+
 
 
   figure {
@@ -211,4 +218,10 @@
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
   }
+  
+
+
+ 
+
+  
   

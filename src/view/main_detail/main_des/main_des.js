@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MainDes = ({ title, description = [], images = [], chart = {}, additionalInfo = [] }) => {
+const MainDes = ({ title, description = [], images = [], chart = {}, additionalInfo = [],optionDes=[] }) => {
   return (
     <div className="detail_des">
       <div className="img_detail_des">
@@ -20,10 +20,12 @@ const MainDes = ({ title, description = [], images = [], chart = {}, additionalI
       ))}
 
       <div>
-        <img src={chart.src} alt={chart.alt} className="img_chart" />
+        <img src={chart} alt={chart.alt} className="img_chart" />
       </div>
 
-      <p className="title_des">{chart.description}</p>
+      {optionDes.map((info, index) => (
+        <p key={index} className="title_des">{info}</p>
+      ))}
     </div>
   );
 };

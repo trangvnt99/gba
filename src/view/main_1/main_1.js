@@ -7,6 +7,12 @@ import '../../styles/main_1/main_circle/main_circle.css';
 import imgComer from '../../img/Vector.png'
 import Container_post from './main_post/main_post.js';
 import MainBusiness from './main_business/main_business.js';
+import evfta from '../../img/main_1/Logo/evfta.png'
+import world from '../../img/main_1/Logo/worldtrade.png'
+import cptpp from '../../img/main_1/Logo/ctptpp.png'
+import trading from '../../img/main_1/Logo/tradinginc.png'
+import imgworld from '../../img/main_1/Logo/img1.png'
+
 function Main_1() {
   const CircleComponent = React.lazy(() => import('./circle_item.js'));
   // hiển thị lần lượt từ trên
@@ -28,16 +34,27 @@ function Main_1() {
         <h1 className="child_title">Investment Associate Sourcing</h1>
         <h1 className="child_title">Representative</h1>
         <button className="btn_view">
-          <a href="http://2dhc.com/info/commercial-N25.html" className="a_view">
+          <a href="http://localhost:3000/main_GBA" className="a_view">
             Xem
           </a>
         </button>
         <div className="image_list">
-          <img src={img} alt="Icon 2" className="img" />
-          <img src={img} alt="Icon 2" className="img" />
-          <img src={img} alt="Icon 2" className="img" />
-          <img src={img} alt="Icon 2" className="img" />
-          <img src={img} alt="Icon 2" className="img" />
+          <a href='http://localhost:3000/main/afta'>
+            <img src={imgworld} alt="Icon 2" className="img" />
+          </a>
+          <a href='http://localhost:3000/main/evfta'>
+            <img src={evfta} alt="Icon 2" className="img" />
+          </a>
+          <a href='http://localhost:3000/main/cptpp'>
+            <img src={cptpp} alt="Icon 2" className="img" />
+          </a>
+          <a href='http://localhost:3000/main/gt'>
+            <img src={trading} alt="Icon 2" className="img" />
+          </a>
+          <a href='http://localhost:3000/main/wto'>
+            <img src={world} alt="Icon 2" className="img" />
+          </a>   
+
         </div>
         <Suspense fallback={<div style={{ height: '10200px', width: '100px' }}></div>}>
         <div class="container_circle_grid">
