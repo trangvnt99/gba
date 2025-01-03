@@ -104,3 +104,12 @@ body {
     height: 454px;
     object-fit: cover;
 }
+
+.text-mem {
+    cursor: pointer; /* Thêm con trỏ chuột kiểu pointer khi hover */
+    transition: text-decoration 0.3s ease; /* Thêm hiệu ứng mượt mà cho gạch chân */
+}
+
+.text-mem:hover {
+    text-decoration: underline; /* Gạch chân khi hover */
+}
