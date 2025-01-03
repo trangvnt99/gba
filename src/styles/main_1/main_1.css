@@ -178,6 +178,15 @@
     margin-top: 10px;
   }
 
+  .group_logo_item_detail{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin:0px 12px 0px 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 26%;
+  }
   .logo-item{
     width: 80px;
     height: 80px;

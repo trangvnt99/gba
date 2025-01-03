@@ -321,6 +321,7 @@
     }
 
     .img_chart {
+        max-width: 100%;
         margin-top: 10px;
     }
 }
@@ -336,6 +337,7 @@
         max-width: 100%;
     }
     .img_chart {
+        max-width: 100%;
         margin-top: 5px;
         height: 70%;
     }
