@@ -3,13 +3,14 @@ import "../../../styles/food/mainSeafood.css";
 import Header from "../../../component/header";
 import Footer from "../../../component/footer";
 import Food from "../../../component/food/food.component";
+import BlackBox from "../../../component/food/blackbox";
 
 import food1 from "../../../picture/food/sea-food/food1.jpg";
 import tomchebien from "../../../picture/food/sea-food/tomchebien.jpg";
 import tomthe from "../../../picture/food/sea-food/tomthe.jpg";
 import tomxu from "../../../picture/food/sea-food/tomxu.jpg";
 import catuyet from "../../../picture/food/sea-food/catuyet.jpg";
-
+import MainDetail from "../../main_detail/main_detail";
 const SeaFood = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -41,7 +42,7 @@ const SeaFood = () => {
         <>
 
 <Header />
-
+<BlackBox />
        <div className="main" >
 
             <div class="menu">
@@ -123,8 +124,10 @@ const SeaFood = () => {
                             .filter((item) => item.page === currentPage)
                             .map((item, index) => (
                                 <div className="item" key={index}>
+                                    <a href="/productdetail">
                                     <p className="name">{item.name}</p>
-                                    <img src={item.img} alt={item.name} className="image" />
+                                    <img  src={item.img} alt={item.name} className="image" />
+                                    </a>
                                 </div>
                             ))}
                     </div>

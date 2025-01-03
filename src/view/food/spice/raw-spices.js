@@ -3,6 +3,7 @@ import "../../../styles/food/mainSeafood.css";
 import Header from "../../../component/header";
 import Footer from "../../../component/footer";
 import Food from "../../../component/food/food.component";
+import BlackBox from "../../../component/food/blackbox";
 
 import spice from "../../../picture/food/raw-spices/spice.webp";
 
@@ -14,7 +15,7 @@ const Spice = () => {
         <>
 
             <Header />
-
+<BlackBox />
             <div className="main" >
 
                 <div class="menu">

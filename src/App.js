@@ -56,7 +56,7 @@ function App() {
     
       <BrowserRouter>
       
-        <Link to="/main">Main</Link>
+        {/* <Link to="/main">Main</Link>
         <br />
 
         <Link to="/main_member">Main_member</Link>
@@ -78,9 +78,9 @@ function App() {
         <br />
         <Link to="/main_1">main_1</Link> 
         <br />
-        <Link to="/productdetail">MainDetail</Link> 
+        <Link to="/productdetail">MainDetail</Link>  */}
         <Routes>
- 
+        <Route index element={<Main_1 />} />
           //main
           <Route path="/main_IASR" element={<MainIASR />} />
           <Route path="/main_Item" element={<MainItems />} />

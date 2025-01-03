@@ -3,6 +3,7 @@ import "../../../styles/food/mainSeafood.css";
 import Header from "../../../component/header";
 import Footer from "../../../component/footer";
 import Food from "../../../component/food/food.component";
+import BlackBox from "../../../component/food/blackbox";
 
 import hatdieu from "../../../picture/food/cashew/hatdieu.jpg";
 
@@ -13,7 +14,7 @@ const Spice = () => {
     return (
         <>
             <Header />
-
+        <BlackBox />
             <div className="main" >
 
                 <div class="menu">

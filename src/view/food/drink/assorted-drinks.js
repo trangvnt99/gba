@@ -3,6 +3,7 @@ import Header from "../../../component/header";
 import Footer from "../../../component/footer";
 import Food from "../../../component/food/food.component";
 import "../../../styles/food/mainSeafood.css"
+import BlackBox from "../../../component/food/blackbox";
 
 import honhopthucuong from "../../../picture/food/assorted-drinks/drinks.jpg";
 
@@ -13,7 +14,7 @@ const Drinks = () => {
     return (
         <>
             <Header />
-
+<BlackBox />
             <div className="main" >
 
                 <div class="menu">

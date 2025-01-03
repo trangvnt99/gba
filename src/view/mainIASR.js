@@ -11,7 +11,9 @@ const MainIASR = () => {
             <Header />
             <div className="blackbox">
                 <box-icon name='home' type='solid' color="#cabfbf" className="icon"></box-icon>
+                <a href="http://localhost:3000/main_1" className="a_title_navi">
                 <p> Trang chủ</p>
+                </a>
                 <box-icon name='chevron-right' type='solid' color="#cabfbf" className="icon"></box-icon>
                 <p id="mem">Commercial & Investment Associate Sourcing Representative</p>
             </div>

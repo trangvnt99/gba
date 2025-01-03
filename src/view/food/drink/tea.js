@@ -3,6 +3,7 @@ import "../../../styles/food/mainSeafood.css";
 import Header from "../../../component/header";
 import Footer from "../../../component/footer";
 import Food from "../../../component/food/food.component";
+import BlackBox from "../../../component/food/blackbox";
 
 import tea1 from "../../../picture/food/tea/tea1.jpg";
 
@@ -12,14 +13,14 @@ const Tea = () => {
 
     return (
         <>
-         <Header />
+            <Header />
+            <BlackBox />
+            <div className="main" >
 
-<div className="main" >
-
-    <div class="menu">
-        <Food />
-    </div>
-           <div class="list">
+                <div class="menu">
+                    <Food />
+                </div>
+                <div class="list">
                     <h1>Các loại Trà</h1>
                     <hr />
                     <div class="container">
@@ -33,7 +34,7 @@ const Tea = () => {
 
                             </p>
                             <p class="description">
-                               Uống trà giúp thanh lọc cơ thể......                      </p>
+                                Uống trà giúp thanh lọc cơ thể......                      </p>
                         </div>
                     </div>
 
@@ -44,10 +45,10 @@ const Tea = () => {
                         Một số chứng nhận xuất khẩu thuỷ sản Việt Nam ra quốc tế cũng được các doanh nghiệp quan tâm như: HACCP, ASC, BAP, MSC và Global GAP,... </p>
 
 
-                    
+
                 </div>
-                </div>
-                <Footer />
+            </div>
+            <Footer />
         </>
     );
 }

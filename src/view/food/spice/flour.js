@@ -3,6 +3,7 @@ import "../../../styles/food/mainSeafood.css";
 import Food from "../../../component/food/food.component";
 import Header from "../../../component/header";
 import Footer from "../../../component/footer";
+import BlackBox from "../../../component/food/blackbox";
 
 import botmi from "../../../picture/food/flour/botmi.jpg";
 
@@ -14,6 +15,8 @@ const Flour = () => {
     return (
         <>
         <Header />
+        <BlackBox />
+        
         <div className="main" >
 
         <div class="menu">
