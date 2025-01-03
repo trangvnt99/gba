@@ -1,12 +1,14 @@
 import React from "react";
 import "../styles/main_member.css";
-import img from "../picture/logo.png";
+
 import Footer from "../component/footer";
 import Header from "../component/header";
-// import { Link } from "react-router-dom";
+import Member from "../component/member/member.component"
+
 import 'boxicons';
 
 const Main_member = () => {
+
     return (
         <>
             <Header />
