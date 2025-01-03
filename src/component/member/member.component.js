@@ -14,53 +14,13 @@ import theus from "../../picture/member/theus.png";
 import trungquoc from "../../picture/member/trungquoc.png";
 
 import { useNavigate } from "react-router-dom";
+import SelectedCountry from "./member.service";
 
 import 'boxicons';
 
 const Member = () => {
 
     const navigate = useNavigate(); 
-    const SelectedCountry = (e) => {
-
-        switch (e) {
-            case "chauau":
-                navigate("/main_member/chauau"); 
-                break;
-            case "nhatban":
-                navigate("/main_member/nhatban"); 
-                break;
-            case "singapore":
-                navigate("/main_member/singapore"); 
-                break;
-            case "anhquoc":
-                navigate("/main_member/anhquoc"); 
-                break;
-            case "trungquoc":
-                navigate("/main_member/trungquoc"); 
-                break;
-            case "canada":
-                navigate("/main_member/canada"); 
-                break;
-            case "dailoan":
-                navigate("/main_member/dailoan"); 
-                break;
-            case "hanquoc":
-                navigate("/main_member/hanquoc"); 
-                break;
-            case "theus":
-                navigate("/main_member/theus"); 
-                break;
-            case "nga":
-                navigate("/main_member/nga"); 
-                break;
-            case "ando":
-                navigate("/main_member/ando"); 
-                break;
-            default:
-                console.log("Không tìm thấy quốc gia:", e); // Xử lý trường hợp không khớp
-        }
-    };
-
 
     return (
         <>
@@ -75,67 +35,67 @@ const Member = () => {
                 <h4 className="title">THÀNH VIÊN</h4>
                 <div className="recb"></div>
                 <div className="grid-mem">
-                    <div className="" onClick={() => SelectedCountry('chauau')}>
+                    <div className="" onClick={() => SelectedCountry('chauau', navigate)}>
                         <div className="img-mem">
                             <img src={chauau} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Châu Âu</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('nhatban')}>
+                    <div className="" onClick={() => SelectedCountry('nhatban', navigate)}>
                         <div className="img-mem">
                             <img src={nhatban} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Nhật bản</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('singapore')}>
+                    <div className="" onClick={() => SelectedCountry('singapore', navigate)}>
                         <div className="img-mem">
                             <img src={singapore} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Singapore</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('anhquoc')}>
+                    <div className="" onClick={() => SelectedCountry('anhquoc', navigate)}>
                         <div className="img-mem">
                             <img src={anhquoc} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Anh Quốc</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('trungquoc')}>
+                    <div className="" onClick={() => SelectedCountry('trungquoc', navigate)}>
                         <div className="img-mem">
                             <img src={trungquoc} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Trung Quốc</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('canada')}>
+                    <div className="" onClick={() => SelectedCountry('canada', navigate)}>
                         <div className="img-mem">
                             <img src={canada} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Canada</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('dailoan')}>
+                    <div className="" onClick={() => SelectedCountry('dailoan', navigate)}>
                         <div className="img-mem">
                             <img src={dailoan} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Đài Loan</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('hanquoc')}>
+                    <div className="" onClick={() => SelectedCountry('hanquoc', navigate)}>
                         <div className="img-mem">
                             <img src={hanquoc} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Hàn Quốc</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('theus')}>
+                    <div className="" onClick={() => SelectedCountry('theus', navigate)}>
                         <div className="img-mem">
                             <img src={theus} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">The Us</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('nga')}>
+                    <div className="" onClick={() => SelectedCountry('nga', navigate)}>
                         <div className="img-mem">
                             <img src={nga} alt="logo" className="logo-mem" />
                         </div>
                         <div className="text-mem">Nga</div>
                     </div>
-                    <div className="" onClick={() => SelectedCountry('ando')}>
+                    <div className="" onClick={() => SelectedCountry('ando', navigate)}>
                         <div className="img-mem">
                             <img src={ando} alt="logo" className="logo-mem" />
                         </div>
