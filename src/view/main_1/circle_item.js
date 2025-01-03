@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/main_1/main_circle/circle_item.css';
 import Tooltip from '@mui/material/Tooltip';
-import { useNavigate,  } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import imgNguCoc from '../../img/main_1/ngucoc.png';
 import imgThit from '../../img/main_1/thit.png';
 import imgGiaVi from '../../img/main_1/giavi.png';
@@ -34,27 +34,26 @@ const data = [
     label: 'Ngũ cốc',
     description: 'Ngũ cốc nguyên hạt giàu dinh dưỡng, tốt cho sức khỏe, bao gồm các loại như gạo lứt, yến mạch, đậu đỗ, phù hợp cho người ăn chay và những ai muốn duy trì lối sống lành mạnh.',
    },
+   
 ];
 
 const CircleComponent = React.memo(() => {
-
-  // Khai báo trạng thái cho việc hiển thị từng item
-  const [visibleItems, setVisibleItems] = useState([]); 
+  const [visibleItems, setVisibleItems] = useState([]);
+  const radius = 150; // Bán kính vòng tròn
+  const itemSize = 80; // Kích thước mỗi item
+  const smallCircleSize = 20; // Kích thước vòng tròn nhỏ
+  const centerX = radius + itemSize / 2; // Tâm X
+  const centerY = radius + itemSize / 2; // Tâm Y
+  const baseOffset = Math.PI / data.length; 
 
   useEffect(() => {
     // Hiển thị từng phần tử với khoảng thời gian cách nhau
     data.forEach((_, index) => {
       setTimeout(() => {
-        setVisibleItems((prev) => [...prev, index]); 
-      }, index * 300); 
+        setVisibleItems((prev) => [...prev, index]);
+      }, index * 300);
     });
   }, []);
-
-  const radius = 150; // Bán kính vòng tròn
-  const itemSize = 80; // Kích thước mỗi item
-  const smallCircleSize = 20; // Kích thước vòng tròn nhỏ
-  const centerX = radius + itemSize / 2; // tâm X
-  const centerY = radius + itemSize / 2; // tâm Y
 
   return (
     <div
@@ -72,7 +71,7 @@ const CircleComponent = React.memo(() => {
       >
         {data.map((_, index) => {
           const angle = (index / data.length) * 2 * Math.PI; // Góc hiện tại
-          const nextAngle = ((index + 1) / data.length) * 2 * Math.PI; // Góc của item tiếp theo
+          const nextAngle = ((index + 1) / data.length) * 2 * Math.PI; // Góc tiếp theo
 
           // Tọa độ điểm đầu và điểm cuối
           const x1 = centerX + radius * Math.cos(angle);
@@ -91,11 +90,11 @@ const CircleComponent = React.memo(() => {
           const cx =
             (1 - t) * (1 - t) * x1 +
             2 * (1 - t) * t * controlX +
-            t * t * x2; // X tọa độ
+            t * t * x2;
           const cy =
             (1 - t) * (1 - t) * y1 +
             2 * (1 - t) * t * controlY +
-            t * t * y2; // Y tọa độ
+            t * t * y2;
 
           return (
             <g
@@ -104,7 +103,6 @@ const CircleComponent = React.memo(() => {
                 visibleItems.includes(index) ? 'visible' : ''
               }`}
             >
-              {/* Đường cong */}
               <path
                 d={`M ${x1},${y1} Q ${controlX},${controlY} ${x2},${y2}`}
                 stroke="white"
@@ -112,7 +110,6 @@ const CircleComponent = React.memo(() => {
                 fill="none"
                 strokeLinecap="round"
               />
-
               <circle cx={cx} cy={cy} r={smallCircleSize / 2} fill="white" />
             </g>
           );
@@ -120,28 +117,26 @@ const CircleComponent = React.memo(() => {
       </svg>
 
       {data.map((item, index) => {
-        const angle = (index / data.length) * 2 * Math.PI + 11; // Góc hiện tại
+        const angle = (index / data.length) * 2 * Math.PI + baseOffset*1.5; // Góc hiện tại
         const x =
           centerX + radius * Math.cos(angle) - itemSize / 2;
         const y =
           centerY + radius * Math.sin(angle) - itemSize / 2;
-        let longText = "Thông tin chi tiết về mục " + item.label +":" + item.description;
 
+          const handleClick = () => {
+            if (item.label === 'Hải sản') {
+              window.location.href = 'http://localhost:3000/main_food/haisan';
+            } else if (item.label === 'Thịt') {
+              window.location.href = 'http://localhost:3000/main_food/giavi';
+            } else if (item.label === 'OCOP &') {
+              window.location.href = 'http://localhost:3000/main_food/giavi';
+            } else if (item.label === 'Ngũ cốc') {
+              window.location.href = 'http://localhost:3000/main_food/ngucoc_hat';
+            } else {
+              window.location.href = 'http://localhost:3000/main_food/giavi';
+            }
+          };
 
-        const handleClick = () => {
-          if (item.label === 'Hải sản') {
-            window.location.href = 'http://localhost:3000/main_food/haisan';
-          } else if (item.label === 'Thịt') {
-            window.location.href = 'http://localhost:3000/main_food/giavi';
-          } else if (item.label === 'OCOP &') {
-            window.location.href = 'http://localhost:3000/main_food/giavi';
-          } else if (item.label === 'Ngũ cốc') {
-            window.location.href = 'http://localhost:3000/main_food/ngucoc_hat';
-          } else {
-            window.location.href = 'http://localhost:3000/main_food/giavi';
-          }
-        };
-   
         return (
           <div
             key={index}
@@ -150,25 +145,31 @@ const CircleComponent = React.memo(() => {
             }`}
             style={{
               position: 'absolute',
-              borderColor: 'white',
               left: x,
               top: y,
               width: itemSize,
               height: itemSize,
               '--index': index,
             }}
-          >   
-            <Tooltip title={longText}>
-              <div className="item-container-circle-main" onClick={handleClick} style={{ cursor: 'pointer' }}>
-                <img src={item.image} alt='' className="item-image-cirle-main" height={itemSize} width={itemSize+20} />
+          >
+            <Tooltip title={`Thông tin: ${item.description}`}>
+              <div
+                className="item-container-circle-main"
+                onClick={handleClick}
+                style={{ cursor: 'pointer' }}
+              >
+                <img
+                  src={item.image}
+                  alt="imag-Item-circle"
+                  className="item-image-cirle-main"  
+                />
                 <div className="item-label-cirlce-man">{item.label}</div>
               </div>
             </Tooltip>
           </div>
         );
       })}
-      
-      {/* Vòng tròn trung tâm */}
+
       <div
         className="center-circle"
         style={{
@@ -179,9 +180,14 @@ const CircleComponent = React.memo(() => {
           height: itemSize + 40,
         }}
       >
-        <div class="item-container">
-          <a href='http://localhost:3000/main_food/thuc_uong'>
-            <img src={imgThucPham} className="center-image" height={itemSize+50} width={itemSize+70} />
+        <div className="item-container">
+          <a href="http://localhost:3000/main_food/thuc_uong">
+            <img
+              src={imgThucPham}
+              className="center-image"
+              height={itemSize + 50}
+              width={itemSize + 70}
+            />
             <div className="center-label">Thực phẩm</div>
           </a>
         </div>
